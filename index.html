@@ -183,16 +183,19 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
       <div class="si">📊</div><div class="st2" data-i="s5t"></div><div class="sd" data-i="s5d"></div>
       <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
     </div>
-    <div class="sc" style="grid-column:1/-1">
-      <div class="si">🤖</div>
-      <div class="st2" data-i="s6t"></div>
-      <div class="sd" data-i="s6d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
-      <div class="sub-service" style="flex-direction:column;gap:6px;max-width:500px">
-        <div class="sub-icon">📰</div>
-        <div class="sub-title" data-i="s7t"></div>
-        <div class="sub-desc" data-i="s7d"></div>
-        <a class="svc-cta" onclick="goTo('contact')" data-i="s7cta"></a>
+    <div class="sc" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;padding:0;overflow:hidden">
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div class="si">🤖</div>
+        <div class="st2" data-i="s6t"></div>
+        <div class="sd" data-i="s6d"></div>
+        <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);width:1px;margin:24px 0"></div>
+      <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px;background:rgba(0,212,170,0.03)">
+        <div class="si" style="background:rgba(0,212,170,.12);border-color:rgba(0,212,170,.2)">📰</div>
+        <div class="st2" data-i="s7t"></div>
+        <div class="sd" data-i="s7d"></div>
+        <a class="svc-cta" style="margin-top:auto;padding-top:8px" onclick="goTo('contact')" data-i="s7cta"></a>
       </div>
     </div>
   </div>
@@ -301,7 +304,7 @@ tr:{
   s4t:"Teknoloji & GPU Gücü Danışmanlığı",s4d:"B2B AI altyapısı, GPU hesaplama ihtiyaçları ve yerel AI ekosistemi kurulumu için stratejik danışmanlık.",
   s5t:"Veri Toplama, Analiz & İstatistiksel Çalışmalar",s5d:"Kurumsal veri toplama süreçleri, istatistiksel modelleme, raporlama ve veriye dayalı karar destek sistemleri.",
   s6t:"Kurumsal Yapay Zeka & Makine Öğrenimi",s6d:"Kurumsal AI uygulamalarının kurulumu, model entegrasyonu, yerel altyapıda çalışan ML sistemleri ve süregelen işletim danışmanlığı.",
-  s7t:"AI Haber Bülteni — Ücretsiz Abonelik",s7d:"OpenAileen altyapısıyla hazırlanan günlük teknoloji ve AI haber briefingi. Müşterilerimize ve takipçilerimize ücretsiz sunulmaktadır.",s7cta:"→ Ücretsiz Abone Ol",
+  s7t:"Yapay Zeka Haber Bülteni",s7d:"OpenAileen altyapısıyla derlenen günlük AI & teknoloji briefingi. Sektördeki gelişmeleri, model güncellemelerini ve dijital dönüşüm haberlerini takip edin.",s7cta:"→ Ücretsiz Abone Ol — Hemen Başla",
   atag:"Hakkımızda",atitle:"Biz Kimiz?",
   aname:"1ADATA Yönetimi",arole:"Odaklı, deneyimli, sonuç öncelikli",
   e1l:"Tecrübe",e1v:"2003 →",e2l:"Global Kurumsal Deneyim",e2v:"10+ yıl",e3l:"Alan",e3v:"Lojistik & IT",e4l:"Odak",e4v:"B2B & Kurumsal",
@@ -355,7 +358,7 @@ en:{
   s4t:"Technology & GPU Power Consulting",s4d:"Strategic consulting for B2B AI infrastructure, GPU computing needs and local AI ecosystem deployment.",
   s5t:"Data Collection, Analysis & Statistical Studies",s5d:"Corporate data collection process design, statistical modelling, reporting and data-driven decision support systems.",
   s6t:"Enterprise AI & Machine Learning",s6d:"Enterprise AI application deployment, model integration, locally-run ML systems and ongoing operational consulting.",
-  s7t:"AI News Briefing — Free Subscription",s7d:"Daily technology and AI news briefing powered by the OpenAileen infrastructure. Provided free of charge to our clients and followers.",s7cta:"→ Subscribe Free",
+  s7t:"AI News Briefing",s7d:"Daily AI & technology briefing powered by OpenAileen. Stay ahead with sector updates, model releases and digital transformation news.",s7cta:"→ Start Free Subscription",
   atag:"About Us",atitle:"Who We Are",
   aname:"1ADATA Management",arole:"Focused, experienced, results first",
   e1l:"Experience",e1v:"2003 →",e2l:"Global Corporate Experience",e2v:"10+ years",e3l:"Field",e3v:"Logistics & IT",e4l:"Focus",e4v:"B2B & Enterprise",
@@ -409,7 +412,7 @@ de:{
   s4t:"Technologie & GPU-Leistungsberatung",s4d:"Strategische Beratung für B2B-KI-Infrastruktur, GPU-Rechenanforderungen und KI-Ökosystembereitstellung.",
   s5t:"Datenerhebung, Analyse & Statistische Studien",s5d:"Datenerhebungsprozesse, statistische Modellierung, Berichterstattung und datengestützte Entscheidungsunterstützung.",
   s6t:"Unternehmens-KI & Maschinelles Lernen",s6d:"Deployment von Unternehmens-KI-Anwendungen, Modellintegration, lokal betriebene ML-Systeme und laufende Betriebsberatung.",
-  s7t:"KI-Nachrichtenbriefing — Kostenlos",s7d:"Tägliches Technologie- und KI-Nachrichtenbriefing auf Basis der OpenAileen-Infrastruktur. Kostenlos für unsere Kunden und Follower.",s7cta:"→ Kostenlos abonnieren",
+  s7t:"KI-Nachrichtenbriefing",s7d:"Tägliches Technologie- und KI-Nachrichtenbriefing auf Basis der OpenAileen-Infrastruktur. Kostenlos für unsere Kunden und Follower.",s7cta:"→ Jetzt kostenlos starten",
   atag:"Über uns",atitle:"Wer wir sind",
   aname:"1ADATA Management",arole:"Fokussiert, erfahren, Ergebnis zuerst",
   e1l:"Erfahrung",e1v:"2003 →",e2l:"Globale Unternehmenserfahrung",e2v:"10+ Jahre",e3l:"Bereich",e3v:"Logistik & IT",e4l:"Fokus",e4v:"B2B & Unternehmen",
