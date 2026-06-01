@@ -113,7 +113,11 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
 .ha-pill{font-size:13px;font-weight:500;padding:11px 24px;border-radius:9px;border:1px solid;cursor:default;letter-spacing:-.1px;flex:1;text-align:center;min-width:200px}
 .ha-b2b{background:rgba(30,111,255,.1);border-color:rgba(30,111,255,.3);color:#7ab4ff}
 .ha-home{background:rgba(0,212,170,.08);border-color:rgba(0,212,170,.3);color:var(--acc2)}
-.sc-news .svc-cta{display:inline-block;margin-top:12px;font-size:12px;color:var(--acc2);cursor:pointer;border-bottom:1px solid rgba(0,212,170,.3);padding-bottom:1px}
+.sub-service{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px}
+.sub-icon{font-size:18px}
+.sub-title{font-size:13px;font-weight:600;color:var(--text)}
+.sub-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.svc-cta{display:inline-block;margin-top:6px;font-size:12px;color:var(--acc2);cursor:pointer;border-bottom:1px solid rgba(0,212,170,.3);padding-bottom:1px;text-decoration:none}
 @media(max-width:700px){.agrid,.cgrid{grid-template-columns:1fr}.stats{gap:16px}.nav-links{display:none}}
 </style>
 </head>
@@ -146,8 +150,9 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
     <div class="hero-aud" id="heroAud"></div>
     <div class="stats">
       <div class="st"><div class="num">20<span>+</span></div><div class="lbl" data-i="s1"></div></div>
-      <div class="st"><div class="num">5</div><div class="lbl" data-i="s2"></div></div>
-      <div class="st"><div class="num">8</div><div class="lbl" data-i="s3"></div></div>
+      <div class="st"><div class="num">10<span>+</span></div><div class="lbl" data-i="s2"></div></div>
+      <div class="st"><div class="num">5</div><div class="lbl" data-i="s3"></div></div>
+      <div class="st"><div class="num">8</div><div class="lbl" data-i="s4"></div></div>
     </div>
   </div>
 </section>
@@ -182,13 +187,12 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
       <div class="st2" data-i="s6t"></div>
       <div class="sd" data-i="s6d"></div>
       <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
-    </div>
-    <div class="sc">
-      <div class="si">📰</div>
-      <div class="st2" data-i="s7t"></div>
-      <div class="sd" data-i="s7d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
-      <a class="svc-cta" onclick="goTo('contact')" data-i="s7cta"></a>
+      <div class="sub-service">
+        <div class="sub-icon">📰</div>
+        <div class="sub-title" data-i="s7t"></div>
+        <div class="sub-desc" data-i="s7d"></div>
+        <a class="svc-cta" onclick="goTo('contact')" data-i="s7cta"></a>
+      </div>
     </div>
   </div>
 </section>
@@ -287,7 +291,7 @@ tr:{
   h1:"Güvenli Altyapı.",h2:"Akıllı Sistemler.",
   hsub:"Kurumsal IT güvenliği, veri analizi, AI ekosistemi ve yeni nesil dijital çözümler. İstanbul merkezli, küresel vizyon.",
   cta_main:"Altyapınızı Güçlendirin & Korunun",cta2:"Hizmetlerimiz",
-  s1:"Yıl Tecrübe",s2:"Hizmet Alanı",s3:"Hizmet Alanı",
+  s1:"Yıl Farklı Sektörel Tecrübe",s2:"Yıl Global IT Yönetimsel Tecrübe",s3:"Hizmet Alanı",
   svctag:"Hizmetler",svctitle:"Ne Yapıyoruz?",
   svcsub:"Kurumsal IT altyapısından veri analizine, AI ekosisteminden GPU danışmanlığına geniş yelpazede hizmet.",
   s1t:"Ekosistem Güvenliği & İzleme",s1d:"Kurumsal ağ güvenliği, tehdit tespiti, sürekli sistem izleme ve güvenlik altyapısı tasarımı.",
@@ -341,7 +345,7 @@ en:{
   h1:"Secure Infrastructure.",h2:"Intelligent Systems.",
   hsub:"Enterprise IT security, data analytics, AI ecosystems and next-generation digital solutions. Istanbul-based, global vision.",
   cta_main:"Strengthen & Protect Your Infrastructure",cta2:"Our Services",
-  s1:"Years Experience",s2:"Service Areas",s3:"Service Areas",
+  s1:"Years Cross-Sector Experience",s2:"Years Global IT Management",s3:"Sector Service Areas",s4:"Technology Service Areas",
   svctag:"Services",svctitle:"What We Do",
   svcsub:"From enterprise IT infrastructure to data analytics, AI ecosystems to GPU consulting.",
   s1t:"Ecosystem Security & Monitoring",s1d:"Enterprise network security, threat detection, continuous monitoring and security infrastructure design.",
@@ -395,7 +399,7 @@ de:{
   h1:"Sichere Infrastruktur.",h2:"Intelligente Systeme.",
   hsub:"Unternehmens-IT-Sicherheit, Datenanalyse, KI-Ökosysteme und Lösungen der nächsten Generation. Standort Istanbul, globale Vision.",
   cta_main:"Infrastruktur stärken & schützen",cta2:"Unsere Leistungen",
-  s1:"Jahre Erfahrung",s2:"Leistungsbereiche",s3:"Leistungsbereiche",
+  s1:"Jahre Branchenerfahrung",s2:"Jahre globales IT-Management",s3:"Leistungsbereiche",
   svctag:"Leistungen",svctitle:"Was wir tun",
   svcsub:"Von IT-Infrastruktur bis Datenanalyse, KI-Ökosystemen bis GPU-Beratung.",
   s1t:"Ökosystem-Sicherheit & Monitoring",s1d:"Netzwerksicherheit, Bedrohungserkennung, kontinuierliches Monitoring und Sicherheitsinfrastrukturdesign.",
