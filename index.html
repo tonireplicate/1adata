@@ -474,7 +474,7 @@ function buildHeroAud(){
   el.innerHTML=labels[lang].map(([l,c])=>`<div class="ha-pill ${c}">${l}</div>`).join('');
 }
 function apply(){
-  const slogans={tr:"Dijital Güven Sağlar",en:"Enables Digital Security",de:"Digitale Sicherheit gestalten"};
+  const slogans={tr:"Dijital Güven Sağlar",en:"Enables Digital Security",de:"Bietet Digitale Sicherheit"};
   const el=document.getElementById("logoSlogan");
   if(el)el.textContent=slogans[lang];
   const d=T[lang];
