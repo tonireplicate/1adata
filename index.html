@@ -124,7 +124,7 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
 </head>
 <body>
 <nav>
-  <a class="logo" href="/" style="text-decoration:none;color:inherit">1A<span>DATA</span></a>
+  <a class="logo" href="/" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:2px"><span>1A<span style="color:var(--acc)">DATA</span></span><span class="logo-slogan" id="logoSlogan" style="font-size:10px;font-weight:400;letter-spacing:.5px;color:var(--muted)"></span></a>
   <div class="nav-links">
     <a onclick="goTo('svc')" data-i="n1"></a>
     <a onclick="goTo('about')" data-i="n2"></a>
@@ -165,31 +165,31 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
   <div class="sgrid">
     <div class="sc">
       <div class="si">🔐</div><div class="st2" data-i="s1t"></div><div class="sd" data-i="s1d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span></div>
     </div>
     <div class="sc">
       <div class="si">💾</div><div class="st2" data-i="s2t"></div><div class="sd" data-i="s2d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
     </div>
     <div class="sc">
       <div class="si">🏢</div><div class="st2" data-i="s3t"></div><div class="sd" data-i="s3d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span></div>
     </div>
     <div class="sc">
       <div class="si">⚡</div><div class="st2" data-i="s4t"></div><div class="sd" data-i="s4d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span></div>
       <a href="https://gpustars.com" target="_blank" style="display:inline-block;margin-top:10px;font-size:11px;color:var(--acc);border-bottom:1px solid rgba(30,111,255,.3);padding-bottom:1px;text-decoration:none">→ GPU fiyatlarını karşılaştırın — gpustars.com</a>
     </div>
     <div class="sc">
       <div class="si">📊</div><div class="st2" data-i="s5t"></div><div class="sd" data-i="s5d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
     </div>
     <div class="sc" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;padding:0;overflow:hidden">
       <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px">
         <div class="si">🤖</div>
         <div class="st2" data-i="s6t"></div>
         <div class="sd" data-i="s6d"></div>
-        <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+        <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
       </div>
       <div style="background:rgba(255,255,255,0.06);width:1px;margin:24px 0"></div>
       <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px;background:rgba(0,212,170,0.03)">
@@ -301,7 +301,7 @@ tr:{
   svcsub:"Kurumsal IT altyapısından veri analizine, AI ekosisteminden GPU danışmanlığına geniş yelpazede hizmet.",
   s1t:"Ekosistem Güvenliği & İzleme",s1d:"Kurumsal ağ güvenliği, tehdit tespiti, sürekli sistem izleme ve güvenlik altyapısı tasarımı.",
   s2t:"Veri Kurtarma & Restore",s2d:"Kritik veri kayıplarında hızlı müdahale, yedekleme sistemleri kurulumu ve felaket kurtarma planlaması.",
-  s3t:"Şirket IT Güvenlik Altyapısı",s3d:"Kurumsal IT altyapısı tasarımı, güvenlik politikaları, erişim yönetimi ve uyumluluk danışmanlığı.",
+  s3t:"Network & IT Altyapı Güvenliği",s3d:"Kurumsal IT altyapısı tasarımı, güvenlik politikaları, erişim yönetimi ve uyumluluk danışmanlığı.",
   s4t:"Teknoloji & GPU Gücü Danışmanlığı",s4d:"B2B AI altyapısı, GPU hesaplama ihtiyaçları ve yerel AI ekosistemi kurulumu için stratejik danışmanlık. Doğru GPU kaynağını bulmak için bağımsız karşılaştırma platformumuzu inceleyin.",
   s5t:"Veri Toplama, Analiz & İstatistiksel Çalışmalar",s5d:"Kurumsal veri toplama süreçleri, istatistiksel modelleme, raporlama ve veriye dayalı karar destek sistemleri.",
   s6t:"Kurumsal Yapay Zeka & Makine Öğrenimi",s6d:"Kurumsal AI uygulamalarının kurulumu, model entegrasyonu, yerel altyapıda çalışan ML sistemleri ve süregelen işletim danışmanlığı.",
@@ -355,7 +355,7 @@ en:{
   svcsub:"From enterprise IT infrastructure to data analytics, AI ecosystems to GPU consulting.",
   s1t:"Ecosystem Security & Monitoring",s1d:"Enterprise network security, threat detection, continuous monitoring and security infrastructure design.",
   s2t:"Data Recovery & Restore",s2d:"Rapid response to critical data loss, backup system implementation and disaster recovery planning.",
-  s3t:"Company IT Security Infrastructure",s3d:"Corporate IT infrastructure design, security policies, access management and compliance consulting.",
+  s3t:"Network & IT Infrastructure Security",s3d:"Corporate IT infrastructure design, security policies, access management and compliance consulting.",
   s4t:"Technology & GPU Power Consulting",s4d:"Strategic consulting for B2B AI infrastructure, GPU computing needs and local AI ecosystem deployment.",
   s5t:"Data Collection, Analysis & Statistical Studies",s5d:"Corporate data collection process design, statistical modelling, reporting and data-driven decision support systems.",
   s6t:"Enterprise AI & Machine Learning",s6d:"Enterprise AI application deployment, model integration, locally-run ML systems and ongoing operational consulting.",
@@ -409,7 +409,7 @@ de:{
   svcsub:"Von IT-Infrastruktur bis Datenanalyse, KI-Ökosystemen bis GPU-Beratung.",
   s1t:"Ökosystem-Sicherheit & Monitoring",s1d:"Netzwerksicherheit, Bedrohungserkennung, kontinuierliches Monitoring und Sicherheitsinfrastrukturdesign.",
   s2t:"Datenwiederherstellung & Restore",s2d:"Schnelle Reaktion bei Datenverlust, Backup-Implementierung und Notfallwiederherstellungsplanung.",
-  s3t:"Unternehmens-IT-Sicherheitsinfrastruktur",s3d:"IT-Infrastrukturdesign, Sicherheitsrichtlinien, Zugriffsverwaltung und Compliance-Beratung.",
+  s3t:"Netzwerk- & IT-Infrastruktursicherheit",s3d:"IT-Infrastrukturdesign, Sicherheitsrichtlinien, Zugriffsverwaltung und Compliance-Beratung.",
   s4t:"Technologie & GPU-Leistungsberatung",s4d:"Strategische Beratung für B2B-KI-Infrastruktur, GPU-Rechenanforderungen und KI-Ökosystembereitstellung.",
   s5t:"Datenerhebung, Analyse & Statistische Studien",s5d:"Datenerhebungsprozesse, statistische Modellierung, Berichterstattung und datengestützte Entscheidungsunterstützung.",
   s6t:"Unternehmens-KI & Maschinelles Lernen",s6d:"Deployment von Unternehmens-KI-Anwendungen, Modellintegration, lokal betriebene ML-Systeme und laufende Betriebsberatung.",
@@ -474,6 +474,9 @@ function buildHeroAud(){
   el.innerHTML=labels[lang].map(([l,c])=>`<div class="ha-pill ${c}">${l}</div>`).join('');
 }
 function apply(){
+  const slogans={tr:"Dijital Güven Sağlar",en:"Enables Digital Security",de:"Digitale Sicherheit gestalten"};
+  const el=document.getElementById("logoSlogan");
+  if(el)el.textContent=slogans[lang];
   const d=T[lang];
   document.querySelectorAll('[data-i]').forEach(el=>{
     const k=el.getAttribute('data-i');
