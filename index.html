@@ -25,10 +25,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,0.95);border-bott
 @keyframes pl{0%,100%{opacity:1}50%{opacity:.3}}
 h1{font-size:clamp(38px,5vw,66px);font-weight:800;line-height:1.08;letter-spacing:-2px;margin-bottom:20px}
 h1 .acc{background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hsub{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:36px;font-weight:300}
+.hsub{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:28px;font-weight:300}
 .hbtns{display:flex;gap:12px;flex-wrap:wrap}
 .bp{background:var(--acc);color:#fff;border:none;padding:12px 24px;border-radius:9px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;font-family:inherit}
 .bp:hover{background:#1659d4;transform:translateY(-1px)}
+.bp-main{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border:none;padding:13px 28px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;letter-spacing:-.1px;box-shadow:0 4px 20px rgba(30,111,255,.2)}
+.bp-main:hover{opacity:.92;transform:translateY(-2px);box-shadow:0 8px 32px rgba(30,111,255,.35)}
 .bg{background:transparent;color:var(--text);border:1px solid var(--border);padding:12px 24px;border-radius:9px;font-size:14px;cursor:pointer;transition:all .2s;font-family:inherit}
 .bg:hover{border-color:rgba(255,255,255,.2);background:var(--card)}
 .stats{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border);flex-wrap:wrap}
@@ -40,13 +42,17 @@ h2{font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-1px;margin-bot
 .ssub{color:var(--muted);font-size:15px;max-width:520px;line-height:1.7;margin-bottom:44px}
 .bg2{background:var(--c2)}
 .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.sc{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:24px 20px;transition:all .3s;position:relative;overflow:hidden}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:24px 20px;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .sc:hover{background:var(--card-h);border-color:rgba(30,111,255,.2);transform:translateY(-3px)}
 .sc:hover::before{transform:scaleX(1)}
 .si{width:44px;height:44px;border-radius:10px;background:rgba(30,111,255,.1);border:1px solid rgba(30,111,255,.18);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:18px}
 .st2{font-size:15px;font-weight:600;margin-bottom:8px}
-.sd{color:var(--muted);font-size:13px;line-height:1.6}
+.sd{color:var(--muted);font-size:13px;line-height:1.6;flex:1}
+.svc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}
+.svc-tag{font-size:10px;font-weight:600;padding:2px 9px;border-radius:100px;letter-spacing:.4px}
+.t-b2b{background:rgba(30,111,255,.12);border:1px solid rgba(30,111,255,.25);color:#7ab4ff}
+.t-home{background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.22);color:var(--acc2)}
 .agrid{display:grid;grid-template-columns:1fr 1.65fr;gap:56px;align-items:start}
 .acard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center}
 .aic{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;margin:0 auto 16px}
@@ -75,8 +81,6 @@ h2{font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-1px;margin-bot
 .bft{background:rgba(180,120,255,.1);border:1px solid rgba(180,120,255,.22);color:#c89aff}
 .bops{background:rgba(136,153,187,.07);border:1px solid rgba(136,153,187,.18);color:var(--muted)}
 .bsoon{background:rgba(245,166,35,.06);border:1px dashed rgba(245,166,35,.28);color:#f5a623}
-.pnotice{display:flex;align-items:center;gap:6px;background:rgba(245,166,35,.05);border:1px solid rgba(245,166,35,.18);border-radius:7px;padding:7px 11px;margin-bottom:10px;font-size:11px;color:#f5a623}
-.pndot{width:5px;height:5px;border-radius:50%;background:#f5a623;flex-shrink:0;animation:pl 1.8s infinite}
 .pdesc{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:12px}
 .ptags{display:flex;flex-wrap:wrap;gap:4px}
 .ptag{background:rgba(30,111,255,.07);border:1px solid rgba(30,111,255,.16);color:#7ab4ff;font-size:11px;padding:2px 8px;border-radius:4px}
@@ -86,9 +90,9 @@ h2{font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-1px;margin-bot
 .fq span{font-size:15px;font-weight:500;color:var(--text)}
 .ficon{width:24px;height:24px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted);font-size:14px;transition:all .3s;font-family:monospace}
 .fi.open .ficon{background:var(--acc);border-color:var(--acc);color:#fff;transform:rotate(45deg)}
-.fa{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.fa{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .fa p{color:var(--muted);font-size:14px;line-height:1.7;padding-top:12px}
-.fi.open .fa{max-height:250px}
+.fi.open .fa{max-height:300px}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .cinfo{display:flex;flex-direction:column;gap:12px}
 .ci{display:flex;align-items:flex-start;gap:11px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px}
@@ -105,6 +109,11 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
 .fl{font-size:16px;font-weight:800}.fl span{color:var(--acc)}
 .ftax{font-size:11px;color:rgba(136,153,187,.45);margin-top:3px}
 .fr{font-size:12px;color:var(--muted)}
+.hero-aud{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.ha-pill{font-size:13px;font-weight:500;padding:11px 24px;border-radius:9px;border:1px solid;cursor:default;letter-spacing:-.1px;flex:1;text-align:center;min-width:200px}
+.ha-b2b{background:rgba(30,111,255,.1);border-color:rgba(30,111,255,.3);color:#7ab4ff}
+.ha-home{background:rgba(0,212,170,.08);border-color:rgba(0,212,170,.3);color:var(--acc2)}
+.sc-news .svc-cta{display:inline-block;margin-top:12px;font-size:12px;color:var(--acc2);cursor:pointer;border-bottom:1px solid rgba(0,212,170,.3);padding-bottom:1px}
 @media(max-width:700px){.agrid,.cgrid{grid-template-columns:1fr}.stats{gap:16px}.nav-links{display:none}}
 </style>
 </head>
@@ -124,34 +133,66 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
     <button class="lb" onclick="setLang('de',this)">DE</button>
   </div>
 </nav>
+
 <section class="hero" id="hero">
   <div class="hi">
     <div class="hbadge"><span data-i="badge"></span></div>
     <h1><span data-i="h1"></span><br><span class="acc" data-i="h2"></span></h1>
     <p class="hsub" data-i="hsub"></p>
     <div class="hbtns">
-      <button class="bp" onclick="goTo('contact')" data-i="cta1"></button>
+      <button class="bp-main" onclick="goTo('contact')" data-i="cta_main"></button>
       <button class="bg" onclick="goTo('svc')" data-i="cta2"></button>
     </div>
+    <div class="hero-aud" id="heroAud"></div>
     <div class="stats">
       <div class="st"><div class="num">20<span>+</span></div><div class="lbl" data-i="s1"></div></div>
       <div class="st"><div class="num">5</div><div class="lbl" data-i="s2"></div></div>
-      <div class="st"><div class="num">7</div><div class="lbl" data-i="s3"></div></div>
+      <div class="st"><div class="num">8</div><div class="lbl" data-i="s3"></div></div>
     </div>
   </div>
 </section>
+
 <section id="svc" class="bg2">
   <div class="stag" data-i="svctag"></div>
   <h2 data-i="svctitle"></h2>
   <p class="ssub" data-i="svcsub"></p>
   <div class="sgrid">
-    <div class="sc"><div class="si">🔐</div><div class="st2" data-i="s1t"></div><div class="sd" data-i="s1d"></div></div>
-    <div class="sc"><div class="si">💾</div><div class="st2" data-i="s2t"></div><div class="sd" data-i="s2d"></div></div>
-    <div class="sc"><div class="si">🏢</div><div class="st2" data-i="s3t"></div><div class="sd" data-i="s3d"></div></div>
-    <div class="sc"><div class="si">⚡</div><div class="st2" data-i="s4t"></div><div class="sd" data-i="s4d"></div></div>
-    <div class="sc"><div class="si">📊</div><div class="st2" data-i="s5t"></div><div class="sd" data-i="s5d"></div></div>
+    <div class="sc">
+      <div class="si">🔐</div><div class="st2" data-i="s1t"></div><div class="sd" data-i="s1d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+    </div>
+    <div class="sc">
+      <div class="si">💾</div><div class="st2" data-i="s2t"></div><div class="sd" data-i="s2d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+    </div>
+    <div class="sc">
+      <div class="si">🏢</div><div class="st2" data-i="s3t"></div><div class="sd" data-i="s3d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+    </div>
+    <div class="sc">
+      <div class="si">⚡</div><div class="st2" data-i="s4t"></div><div class="sd" data-i="s4d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span></div>
+      <a href="https://gpustars.com" target="_blank" style="display:inline-block;margin-top:10px;font-size:11px;color:var(--acc);border-bottom:1px solid rgba(30,111,255,.3);padding-bottom:1px;text-decoration:none">→ gpustars.com</a>
+    </div>
+    <div class="sc">
+      <div class="si">📊</div><div class="st2" data-i="s5t"></div><div class="sd" data-i="s5d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+    <div class="sc">
+      <div class="si">🤖</div>
+      <div class="st2" data-i="s6t"></div>
+      <div class="sd" data-i="s6d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+    </div>
+    <div class="sc">
+      <div class="si">📰</div>
+      <div class="st2" data-i="s7t"></div>
+      <div class="sd" data-i="s7d"></div>
+      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network / IT</span><span class="svc-tag t-home">Home Network</span></div>
+      <a class="svc-cta" onclick="goTo('contact')" data-i="s7cta"></a>
+    </div>
   </div>
 </section>
+
 <section id="about">
   <div class="stag" data-i="atag"></div>
   <h2 data-i="atitle"></h2>
@@ -176,6 +217,7 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
     </div>
   </div>
 </section>
+
 <section id="proj" class="bg2">
   <div class="stag" data-i="ptag"></div>
   <h2 data-i="ptitle"></h2>
@@ -193,7 +235,6 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
     </div>
     <div class="pc pend">
       <div class="ph"><div><div class="pn">Open<span style="color:#f5a623">Gov</span><span style="color:var(--acc)">Int</span></div><div class="pdom">opengovint.com · opengovintelligence.com</div></div><div class="pbadge bsoon" data-i="bsoon"></div></div>
-      <div class="pnotice"><div class="pndot"></div><span data-i="pnotice"></span></div>
       <div class="pdesc" data-i="govd"></div>
       <div class="ptags"><span class="ptag">AI Governance</span><span class="ptag">ML Certification</span><span class="ptag">Policy</span></div>
     </div>
@@ -209,46 +250,252 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
     </div>
   </div>
 </section>
+
 <section id="faq">
   <div class="stag" data-i="ftag"></div>
   <h2 data-i="ftitle"></h2>
   <div class="flist" id="faqList"></div>
 </section>
+
 <section id="contact" class="bg2">
   <div class="stag" data-i="ctag"></div>
   <h2 data-i="ctitle"></h2>
   <div class="cgrid">
-    <div class="cinfo">
-      <div class="ci"><div class="cico">📧</div><div><div class="clbl" data-i="cl1"></div><div class="cval"><a href="mailto:info@1adata.com">info@1adata.com</a></div></div></div>
-      <div class="ci"><div class="cico">🏛️</div><div><div class="clbl" data-i="cl2"></div><div class="cval">1ADATA — VKN: 8570100452</div><div style="font-size:12px;color:var(--muted);margin-top:2px" data-i="cl2b"></div></div></div>
-      <div class="ci"><div class="cico">📍</div><div><div class="clbl" data-i="cl3"></div><div class="cval" data-i="cl3v"></div></div></div>
-      <div class="ci"><div class="cico">🌐</div><div><div class="clbl" data-i="cl4"></div><div class="cval"><a href="https://1adata.com" style="color:var(--acc)">1adata.com</a></div></div></div>
-    </div>
+    <div class="cinfo" id="cinfo"></div>
     <div>
       <div class="fg"><label data-i="fn"></label><input type="text"></div>
       <div class="fg"><label data-i="fe"></label><input type="email"></div>
       <div class="fg"><label data-i="fs"></label>
-        <select><option data-i="fo1"></option><option data-i="fo2"></option><option data-i="fo3"></option><option data-i="fo4"></option><option data-i="fo5"></option><option data-i="fo6"></option><option data-i="fo7"></option></select>
+        <select><option data-i="fo1"></option><option data-i="fo2"></option><option data-i="fo3"></option><option data-i="fo4"></option><option data-i="fo5"></option><option data-i="fo6"></option></select>
       </div>
       <div class="fg"><label data-i="fm"></label><textarea></textarea></div>
       <button class="bp" style="width:100%" data-i="fsend"></button>
     </div>
   </div>
 </section>
+
 <footer>
-  <div><div class="fl">1A<span>DATA</span></div><div class="ftax">VKN: 8570100452 — Ümraniye VD — İstanbul</div></div>
+  <div><div class="fl">1A<span>DATA</span></div><div class="ftax" id="ftax"></div></div>
   <div class="fr" data-i="fcp"></div>
 </footer>
+
 <script>
 const T={
-tr:{n1:"Hizmetler",n2:"Hakkımızda",n3:"Projeler",n4:"SSS",n5:"İletişim",badge:"2003'ten Beri — 20+ Yıl Tecrübe",h1:"Güvenli Altyapı.",h2:"Akıllı Sistemler.",hsub:"Kurumsal IT güvenliği, veri analizi, AI ekosistemi ve yeni nesil dijital çözümler. İstanbul merkezli, küresel vizyon.",cta1:"Bize Ulaşın",cta2:"Hizmetlerimiz",s1:"Yıl Tecrübe",s2:"Hizmet Alanı",s3:"Aktif Domain",svctag:"Hizmetler",svctitle:"Ne Yapıyoruz?",svcsub:"Kurumsal IT altyapısından veri analizine, AI ekosisteminden GPU danışmanlığına geniş yelpazede hizmet.",s1t:"Ekosistem Güvenliği & İzleme",s1d:"Kurumsal ağ güvenliği, tehdit tespiti, sürekli sistem izleme ve güvenlik altyapısı tasarımı.",s2t:"Veri Kurtarma & Restore",s2d:"Kritik veri kayıplarında hızlı müdahale, yedekleme sistemleri kurulumu ve felaket kurtarma planlaması.",s3t:"Şirket IT Güvenlik Altyapısı",s3d:"Kurumsal IT altyapısı tasarımı, güvenlik politikaları, erişim yönetimi ve uyumluluk danışmanlığı.",s4t:"Teknoloji & GPU Gücü Danışmanlığı",s4d:"B2B AI altyapısı, GPU hesaplama ihtiyaçları ve yerel AI ekosistemi kurulumu için stratejik danışmanlık.",s5t:"Veri Toplama, Analiz & İstatistiksel Çalışmalar",s5d:"Kurumsal veri toplama süreçleri, istatistiksel modelleme, raporlama ve veriye dayalı karar destek sistemleri.",atag:"Hakkımızda",atitle:"Biz Kimiz?",aname:"1ADATA Yönetimi",arole:"Odaklı, deneyimli, sonuç öncelikli",e1l:"Tecrübe",e1v:"2003 →",e2l:"Global Kurumsal Deneyim",e2v:"10+ yıl",e3l:"Alan",e3v:"Lojistik & IT",e4l:"Odak",e4v:"B2B & Kurumsal",ap1:"1ADATA yönetimi, 2003'ten bu yana lojistik ve teknoloji sektörlerinde bizzat edinilmiş saha tecrübesini taşıyor. Bu süreçte hem kişisel hem de kurumsal ölçekte işleyiş deneyimi biriktirildi.",ap2:"Buna ek olarak, 10 yılı aşkın süredir global teknoloji devi şirketlerin iç yapılarında, süreçlerinde ve kültürlerinde edinilen birinci elden bilgi, bugün müşterilere sunulan danışmanlık hizmetinin temelini oluşturuyor. Büyük organizasyonların nasıl çalıştığını içeriden bilen bir ekip, küçük yapıların esnekliğiyle hareket ediyor.",ap3:"Yapay zeka altyapısı, siber güvenlik, veri yönetimi ve GPU hesaplama alanlarındaki teknik birikim, iş süreçlerini daha verimli ve güvenli hale getirmek için doğrudan uygulanıyor.",ap4:"Gösteriş değil, çıktı. Her projede güven ilişkisi kurmak ve somut değer üretmek öncelikli hedeftir.",t1:"🚀 Lojistik & Teknoloji",t2:"🔒 Siber Güvenlik",t3:"🤖 AI Ekosistemi",t4:"📊 Veri & Analiz",t5:"🌍 Global Deneyim",ptag:"Projeler & Domainler",ptitle:"Geliştirdiğimiz Ürünler",psub:"Ekosistemimizde hayata geçirilen platformlar ve dijital girişimler.",bsoon:"YAKINDA",pnotice:"Nameserver onayı bekleniyor — registrar işlemi devam ediyor",gd:"GPU bulut sağlayıcılarını fiyat, performans ve güvenilirlik açısından karşılaştıran profesyonel benchmark platformu. Küresel ve TR bazlı sürümleriyle AI iş yükleriniz için doğru kaynağı bulmanızı sağlar.",od:"Yerel AI altyapısı üzerinde çalışan kurumsal ML/AI ekosistemi. Gizlilik öncelikli, bulut bağımsız model yönetimi ve otomasyon platformu.",govd:"ML/AI yönetişimi ve sertifikasyon programları için bağımsız platform. Kurumlar için uyumluluk çerçeveleri, politika geliştirme ve yönetişim yapıları.",qd:"Yeni nesil arama motoru. Sıfır log politikası ve gizlilik öncelikli mimariyle dijital mahremiyeti yeniden tanımlar.",ld:"Yurt içi ve uluslararası nakliye operasyonları. Teknoloji destekli lojistik yönetimi ve müşteri memnuniyeti odaklı hizmet.",ftag:"SSS",ftitle:"Sıkça Sorulan Sorular",ctag:"İletişim",ctitle:"Bize Ulaşın",cl1:"E-posta",cl2:"Vergi Bilgileri",cl2b:"Vergi Dairesi: Ümraniye",cl3:"Konum",cl3v:"İstanbul, Türkiye",cl4:"Web",fn:"Ad Soyad",fe:"E-posta",fs:"Konu",fm:"Mesaj",fsend:"Mesaj Gönder →",fo1:"Ekosistem Güvenliği",fo2:"Veri Kurtarma",fo3:"IT Altyapısı",fo4:"GPU Danışmanlığı",fo5:"Veri & İstatistik",fo6:"GPUStars / OpenAileen",fo7:"Diğer",fcp:"© 2003–2026 1ADATA. Tüm hakları saklıdır.",faqs:[{q:"1ADATA nedir, ne yapar, kime hitap eder?",a:"1ADATA, 2003'ten bu yana kurumsal IT güvenliği, veri kurtarma, AI altyapısı ve veri analizi alanlarında B2B hizmet sunan İstanbul merkezli bir teknoloji ekibidir. KOBİ'lerden büyük kurumsal yapılara kadar teknoloji altyapısını güçlendirmek isteyen herkese hitap ediyoruz."},{q:"Yönetimin geçmişi ve tecrübesi nedir?",a:"2003'ten bu yana lojistik ve teknoloji sektörlerinde edinilen saha tecrübesinin yanı sıra, 10 yılı aşkın sürede global teknoloji devi şirketlerde kişisel ve kurumsal düzeyde birinci elden işleyiş deneyimi biriktirildi. Bu birikim, danışmanlık hizmetlerinin temelini oluşturuyor."},{q:"qrawl nedir?",a:"qrawl.net, sıfır log politikasıyla çalışan, gizlilik öncelikli yeni nesil bir arama motorudur. Kullanıcı verilerini saklamadan futuristik bir arama deneyimi sunmayı hedeflemektedir."},{q:"OpenGovInt ne iş yapar?",a:"opengovint.com ve opengovintelligence.com üzerinden yürütülecek bu platform, kurumlar için ML/AI yönetişim çerçeveleri, sertifikasyon programları ve uyumluluk danışmanlığı sunacak. Nameserver aktivasyonu yakında tamamlanacak."},{q:"Nasıl iletişime geçebilirim?",a:"info@1adata.com adresine e-posta göndererek veya bu sayfadaki formu doldurarak bize ulaşabilirsiniz. En kısa sürede dönüş yapıyoruz."}]},
-en:{n1:"Services",n2:"About",n3:"Projects",n4:"FAQ",n5:"Contact",badge:"Since 2003 — 20+ Years of Experience",h1:"Secure Infrastructure.",h2:"Intelligent Systems.",hsub:"Enterprise IT security, data analytics, AI ecosystems and next-generation digital solutions. Istanbul-based, global vision.",cta1:"Contact Us",cta2:"Our Services",s1:"Years Experience",s2:"Service Areas",s3:"Active Domains",svctag:"Services",svctitle:"What We Do",svcsub:"From enterprise IT infrastructure to data analytics, AI ecosystems to GPU consulting.",s1t:"Ecosystem Security & Monitoring",s1d:"Enterprise network security, threat detection, continuous monitoring and security infrastructure design.",s2t:"Data Recovery & Restore",s2d:"Rapid response to critical data loss, backup system implementation and disaster recovery planning.",s3t:"Company IT Security Infrastructure",s3d:"Corporate IT infrastructure design, security policies, access management and compliance consulting.",s4t:"Technology & GPU Power Consulting",s4d:"Strategic consulting for B2B AI infrastructure, GPU computing needs and local AI ecosystem deployment.",s5t:"Data Collection, Analysis & Statistical Studies",s5d:"Corporate data collection process design, statistical modelling, reporting and data-driven decision support systems.",atag:"About Us",atitle:"Who We Are",aname:"1ADATA Management",arole:"Focused, experienced, results first",e1l:"Experience",e1v:"2003 →",e2l:"Global Corporate Experience",e2v:"10+ years",e3l:"Field",e3v:"Logistics & IT",e4l:"Focus",e4v:"B2B & Enterprise",ap1:"The 1ADATA management carries hands-on experience built since 2003 across logistics and technology — both at a personal and organisational level.",ap2:"In addition, over a decade of first-hand exposure to the inner workings, processes and culture of global technology companies forms the foundation of the consulting services offered today. A team that knows how large organisations operate from the inside, moving with the agility of a small one.",ap3:"Technical expertise in AI infrastructure, cybersecurity, data management and GPU computing is applied directly to make business processes more efficient and secure.",ap4:"No showmanship — just output. Building trust and delivering tangible value in every project is the primary goal.",t1:"🚀 Logistics & Tech",t2:"🔒 Cybersecurity",t3:"🤖 AI Ecosystem",t4:"📊 Data & Analytics",t5:"🌍 Global Experience",ptag:"Projects & Domains",ptitle:"Products We Build",psub:"Platforms and digital ventures brought to life within our ecosystem.",bsoon:"COMING SOON",pnotice:"Nameserver approval pending — registrar process in progress",gd:"A professional benchmark platform comparing GPU cloud providers on price, performance and reliability. Global and TR-based versions available.",od:"An enterprise ML/AI ecosystem running on local infrastructure. Privacy-first, cloud-independent model management and automation platform.",govd:"An independent platform for ML/AI governance and certification programmes. Compliance frameworks, policy development and governance structures for organisations.",qd:"A next-generation search engine. Zero logging policy and privacy-first architecture redefine digital privacy.",ld:"Domestic and international freight operations. Technology-driven logistics management with a focus on customer satisfaction.",ftag:"FAQ",ftitle:"Frequently Asked Questions",ctag:"Contact",ctitle:"Get In Touch",cl1:"Email",cl2:"Tax Information",cl2b:"Tax Office: Ümraniye",cl3:"Location",cl3v:"Istanbul, Turkey",cl4:"Website",fn:"Full Name",fe:"Email",fs:"Subject",fm:"Message",fsend:"Send Message →",fo1:"Ecosystem Security",fo2:"Data Recovery",fo3:"IT Infrastructure",fo4:"GPU Consulting",fo5:"Data & Statistics",fo6:"GPUStars / OpenAileen",fo7:"Other",fcp:"© 2003–2026 1ADATA. All rights reserved.",faqs:[{q:"What is 1ADATA, what does it do and who is it for?",a:"1ADATA is an Istanbul-based technology team providing B2B services in enterprise IT security, data recovery, AI infrastructure and data analytics since 2003."},{q:"What is the management's background?",a:"Alongside field experience built since 2003, the management brings over a decade of first-hand exposure to the inner workings of global technology companies. This foundation underpins all consulting services."},{q:"What is qrawl?",a:"qrawl.net is a next-generation search engine with zero logging policy and privacy-first architecture, delivering a futuristic search experience without storing user data."},{q:"What does OpenGovInt do?",a:"Via opengovint.com and opengovintelligence.com, this platform will offer ML/AI governance frameworks, certification programmes and compliance consulting. Nameserver activation coming soon."},{q:"How can I get in touch?",a:"Send an email to info@1adata.com or fill out the form on this page. We respond as quickly as possible."}]},
-de:{n1:"Leistungen",n2:"Über uns",n3:"Projekte",n4:"FAQ",n5:"Kontakt",badge:"Seit 2003 — 20+ Jahre Erfahrung",h1:"Sichere Infrastruktur.",h2:"Intelligente Systeme.",hsub:"Unternehmens-IT-Sicherheit, Datenanalyse, KI-Ökosysteme und Lösungen der nächsten Generation. Standort Istanbul, globale Vision.",cta1:"Kontakt aufnehmen",cta2:"Unsere Leistungen",s1:"Jahre Erfahrung",s2:"Leistungsbereiche",s3:"Aktive Domains",svctag:"Leistungen",svctitle:"Was wir tun",svcsub:"Von IT-Infrastruktur bis Datenanalyse, KI-Ökosystemen bis GPU-Beratung.",s1t:"Ökosystem-Sicherheit & Monitoring",s1d:"Netzwerksicherheit, Bedrohungserkennung, kontinuierliches Monitoring und Sicherheitsinfrastrukturdesign.",s2t:"Datenwiederherstellung & Restore",s2d:"Schnelle Reaktion bei Datenverlust, Backup-Implementierung und Notfallwiederherstellungsplanung.",s3t:"Unternehmens-IT-Sicherheitsinfrastruktur",s3d:"IT-Infrastrukturdesign, Sicherheitsrichtlinien, Zugriffsverwaltung und Compliance-Beratung.",s4t:"Technologie & GPU-Leistungsberatung",s4d:"Strategische Beratung für B2B-KI-Infrastruktur, GPU-Rechenanforderungen und KI-Ökosystembereitstellung.",s5t:"Datenerhebung, Analyse & Statistische Studien",s5d:"Datenerhebungsprozesse, statistische Modellierung, Berichterstattung und datengestützte Entscheidungsunterstützung.",atag:"Über uns",atitle:"Wer wir sind",aname:"1ADATA Management",arole:"Fokussiert, erfahren, Ergebnis zuerst",e1l:"Erfahrung",e1v:"2003 →",e2l:"Globale Unternehmenserfahrung",e2v:"10+ Jahre",e3l:"Bereich",e3v:"Logistik & IT",e4l:"Fokus",e4v:"B2B & Unternehmen",ap1:"Das 1ADATA-Management trägt seit 2003 in Logistik und Technologie aufgebaute Praxiserfahrung — sowohl auf persönlicher als auch auf organisatorischer Ebene.",ap2:"Darüber hinaus bildet über ein Jahrzehnt direkte Einblicke in globale Technologiekonzerne die Grundlage der heutigen Beratungsleistungen. Ein Team, das weiß, wie große Organisationen von innen funktionieren — mit der Agilität eines kleinen.",ap3:"Know-how in KI-Infrastruktur, Cybersicherheit, Datenverwaltung und GPU-Computing wird direkt eingesetzt.",ap4:"Keine Schaustellung — nur Ergebnisse. Vertrauen und greifbarer Mehrwert in jedem Projekt.",t1:"🚀 Logistik & Tech",t2:"🔒 Cybersicherheit",t3:"🤖 KI-Ökosystem",t4:"📊 Daten & Analyse",t5:"🌍 Globale Erfahrung",ptag:"Projekte & Domains",ptitle:"Unsere Produkte",psub:"Plattformen und digitale Unternehmungen aus unserem Ökosystem.",bsoon:"DEMNÄCHST",pnotice:"Nameserver-Genehmigung ausstehend — Registrar-Prozess läuft",gd:"Professionelle Benchmark-Plattform zum Vergleich von GPU-Cloud-Anbietern. Global und TR-basiert verfügbar.",od:"Unternehmens-ML/AI-Ökosystem auf lokaler Infrastruktur. Datenschutz-orientiert, Cloud-unabhängig.",govd:"Unabhängige Plattform für ML/AI-Governance und Zertifizierungsprogramme.",qd:"Suchmaschine der nächsten Generation. Zero-Logging-Politik und datenschutzorientierte Architektur.",ld:"Inländische und internationale Frachtoperationen. Technologiegetriebenes Logistikmanagement.",ftag:"FAQ",ftitle:"Häufig gestellte Fragen",ctag:"Kontakt",ctitle:"Kontakt aufnehmen",cl1:"E-Mail",cl2:"Steuerinformationen",cl2b:"Finanzamt: Ümraniye",cl3:"Standort",cl3v:"Istanbul, Türkei",cl4:"Website",fn:"Vollständiger Name",fe:"E-Mail",fs:"Betreff",fm:"Nachricht",fsend:"Nachricht senden →",fo1:"Ökosystem-Sicherheit",fo2:"Datenwiederherstellung",fo3:"IT-Infrastruktur",fo4:"GPU-Beratung",fo5:"Daten & Statistik",fo6:"GPUStars / OpenAileen",fo7:"Sonstige",fcp:"© 2003–2026 1ADATA. Alle Rechte vorbehalten.",faqs:[{q:"Was ist 1ADATA und für wen ist es?",a:"1ADATA ist ein Technologieteam aus Istanbul, das seit 2003 B2B-Dienstleistungen in IT-Sicherheit, Datenwiederherstellung, KI-Infrastruktur und Datenanalyse anbietet."},{q:"Was ist der Hintergrund des Managements?",a:"Neben der seit 2003 aufgebauten Praxiserfahrung bringt das Management über ein Jahrzehnt direkte Einblicke in globale Technologiekonzerne mit. Diese Grundlage prägt alle Beratungsleistungen."},{q:"Was ist qrawl?",a:"qrawl.net ist eine Suchmaschine der nächsten Generation mit Zero-Logging-Politik für ein futuristisches Sucherlebnis ohne Datenspeicherung."},{q:"Was macht OpenGovInt?",a:"Über opengovint.com und opengovintelligence.com werden ML/AI-Governance-Rahmen, Zertifizierungsprogramme und Compliance-Beratung angeboten. Nameserver-Aktivierung folgt bald."},{q:"Wie kann ich Kontakt aufnehmen?",a:"E-Mail an info@1adata.com oder Formular ausfüllen."}]}
+tr:{
+  n1:"Hizmetler",n2:"Hakkımızda",n3:"Projeler",n4:"SSS",n5:"İletişim",
+  badge:"2003'ten Beri — 20+ Yıl Tecrübe",
+  h1:"Güvenli Altyapı.",h2:"Akıllı Sistemler.",
+  hsub:"Kurumsal IT güvenliği, veri analizi, AI ekosistemi ve yeni nesil dijital çözümler. İstanbul merkezli, küresel vizyon.",
+  cta_main:"Altyapınızı Güçlendirin & Korunun",cta2:"Hizmetlerimiz",
+  s1:"Yıl Tecrübe",s2:"Hizmet Alanı",s3:"Hizmet Alanı",
+  svctag:"Hizmetler",svctitle:"Ne Yapıyoruz?",
+  svcsub:"Kurumsal IT altyapısından veri analizine, AI ekosisteminden GPU danışmanlığına geniş yelpazede hizmet.",
+  s1t:"Ekosistem Güvenliği & İzleme",s1d:"Kurumsal ağ güvenliği, tehdit tespiti, sürekli sistem izleme ve güvenlik altyapısı tasarımı.",
+  s2t:"Veri Kurtarma & Restore",s2d:"Kritik veri kayıplarında hızlı müdahale, yedekleme sistemleri kurulumu ve felaket kurtarma planlaması.",
+  s3t:"Şirket IT Güvenlik Altyapısı",s3d:"Kurumsal IT altyapısı tasarımı, güvenlik politikaları, erişim yönetimi ve uyumluluk danışmanlığı.",
+  s4t:"Teknoloji & GPU Gücü Danışmanlığı",s4d:"B2B AI altyapısı, GPU hesaplama ihtiyaçları ve yerel AI ekosistemi kurulumu için stratejik danışmanlık.",
+  s5t:"Veri Toplama, Analiz & İstatistiksel Çalışmalar",s5d:"Kurumsal veri toplama süreçleri, istatistiksel modelleme, raporlama ve veriye dayalı karar destek sistemleri.",
+  s6t:"Kurumsal Yapay Zeka & Makine Öğrenimi",s6d:"Kurumsal AI uygulamalarının kurulumu, model entegrasyonu, yerel altyapıda çalışan ML sistemleri ve süregelen işletim danışmanlığı.",
+  s7t:"AI Haber Bülteni — Ücretsiz Abonelik",s7d:"OpenAileen altyapısıyla hazırlanan günlük teknoloji ve AI haber briefingi. Müşterilerimize ve takipçilerimize ücretsiz sunulmaktadır.",s7cta:"→ Ücretsiz Abone Ol",
+  atag:"Hakkımızda",atitle:"Biz Kimiz?",
+  aname:"1ADATA Yönetimi",arole:"Odaklı, deneyimli, sonuç öncelikli",
+  e1l:"Tecrübe",e1v:"2003 →",e2l:"Global Kurumsal Deneyim",e2v:"10+ yıl",e3l:"Alan",e3v:"Lojistik & IT",e4l:"Odak",e4v:"B2B & Kurumsal",
+  ap1:"1ADATA yönetimi, 2003'ten bu yana lojistik ve teknoloji sektörlerinde bizzat edinilmiş saha tecrübesini taşıyor. Bu süreçte hem kişisel hem de kurumsal ölçekte işleyiş deneyimi biriktirildi.",
+  ap2:"Buna ek olarak, 10 yılı aşkın süredir global teknoloji devi şirketlerin iç yapılarında, süreçlerinde ve kültürlerinde edinilen birinci elden bilgi, bugün müşterilere sunulan danışmanlık hizmetinin temelini oluşturuyor. Büyük organizasyonların nasıl çalıştığını içeriden bilen bir ekip, küçük yapıların esnekliğiyle hareket ediyor.",
+  ap3:"Yapay zeka altyapısı, siber güvenlik, veri yönetimi ve GPU hesaplama alanlarındaki teknik birikim, iş süreçlerini daha verimli ve güvenli hale getirmek için doğrudan uygulanıyor. Ayrıca İstanbul Adliyeleri bünyesinde yürütülen adli bilirkişi faaliyetleri de bu teknik birikimin somut bir yansımasıdır.",
+  ap4:"Gösteriş değil, çıktı. Her projede güven ilişkisi kurmak ve somut değer üretmek öncelikli hedeftir.",
+  t1:"🚀 Lojistik & Teknoloji",t2:"🔒 Siber Güvenlik",t3:"🤖 AI Ekosistemi",t4:"📊 Veri & Analiz",t5:"🌍 Global Deneyim",
+  ptag:"Projeler",ptitle:"Geliştirdiğimiz Ürünler",psub:"Ekosistemimizde hayata geçirilen platformlar ve dijital girişimler.",
+  bsoon:"YAKINDA",
+  gd:"GPU bulut sağlayıcılarını fiyat, performans ve güvenilirlik açısından karşılaştıran profesyonel benchmark platformu. Küresel ve TR bazlı sürümleriyle AI iş yükleriniz için doğru kaynağı bulmanızı sağlar.",
+  od:"Yerel AI altyapısı üzerinde çalışan kurumsal ML/AI ekosistemi. Gizlilik öncelikli, bulut bağımsız model yönetimi ve otomasyon platformu.",
+  govd:"ML/AI yönetişimi ve sertifikasyon programları için bağımsız platform. Kurumlar için uyumluluk çerçeveleri, politika geliştirme ve yönetişim yapıları.",
+  qd:"Yeni nesil arama motoru. Sıfır log politikası ve gizlilik öncelikli mimariyle dijital mahremiyeti yeniden tanımlar.",
+  ld:"Yurt içi ve uluslararası nakliye operasyonları. Teknoloji destekli lojistik yönetimi ve müşteri memnuniyeti odaklı hizmet.",
+  ftag:"SSS",ftitle:"Sıkça Sorulan Sorular",
+  ctag:"İletişim",ctitle:"Bize Ulaşın",
+  fn:"Ad Soyad",fe:"E-posta",fs:"Konu",fm:"Mesaj",fsend:"Mesaj Gönder →",
+  fo1:"Ekosistem Güvenliği & İzleme",fo2:"Veri Kurtarma & Restore",fo3:"IT Güvenlik Altyapısı",fo4:"Teknoloji & GPU Danışmanlığı",fo5:"Veri Analizi & İstatistik",fo6:"Diğer",
+  fcp:"© 2003–2026 1ADATA. Tüm hakları saklıdır.",
+  contact:[
+    {ico:"📧",lbl:"E-posta",val:'<a href="mailto:info@1adata.com">info@1adata.com</a>'},
+    {ico:"📞",lbl:"Telefon",val:"Tel: 0850-521087 &nbsp;|&nbsp; GSM: 0551-8360101"},
+    {ico:"📍",lbl:"Adres",val:"Sur Yapı Exen, İstanbul"},
+    {ico:"🏛️",lbl:"Vergi Bilgileri",val:"VKN: 8570100452 — Ümraniye VD"},
+    {ico:"🌐",lbl:"Web",val:'<a href="https://1adata.com" style="color:var(--acc)">1adata.com</a>'}
+  ],
+  ftax:"VKN: 8570100452 — İstanbul / Ümraniye VD",
+  faqs:[
+    {q:"1ADATA nedir, ne yapar, kime hitap eder?",a:"1ADATA, 2003'ten bu yana kurumsal IT güvenliği, veri kurtarma, AI altyapısı ve veri analizi alanlarında B2B hizmet sunan İstanbul merkezli bir teknoloji ekibidir. KOBİ'lerden büyük kurumsal yapılara ve bireysel kullanıcılara kadar teknoloji altyapısını güçlendirmek isteyen herkese hitap ediyoruz."},
+    {q:"Ekosistem Güvenliği & İzleme hizmeti ne kapsar?",a:"Kurumsal ağ altyapısının güvenlik analizi, saldırı tespiti ve önleme sistemleri, sürekli sistem izleme, güvenlik açığı değerlendirmesi ve güvenlik politikası tasarımı hizmetlerini kapsar. Hem mevcut sistemlerin denetimi hem de sıfırdan güvenli altyapı kurulumu gerçekleştirilir."},
+    {q:"Veri kurtarma hizmeti nasıl işliyor?",a:"Veri kaybı yaşandığında önce durum analizi yapılır, kurtarılabilir veri tespit edilir ve müdahale planı hazırlanır. Hard disk arızaları, yanlışlıkla silme, RAID bozulması ve sistem çökmesi gibi senaryolarda hızlı müdahale sağlanır. Acil durumlarda öncelikli destek mevcuttur."},
+    {q:"Şirket IT güvenlik altyapısı kurulumu nasıl yapılıyor?",a:"Önce mevcut altyapı ve ihtiyaçlar analiz edilir. Ardından güvenlik politikaları, erişim yönetimi, ağ segmentasyonu ve yedekleme sistemleri tasarlanır. Kurulum ve devreye alma sürecinde tam destek sağlanır, ardından düzenli denetimlerle sürdürülebilirlik güvence altına alınır."},
+    {q:"GPU ve AI altyapısı danışmanlığı kimler için uygundur?",a:"AI/ML projesi geliştiren veya geliştirmeyi planlayan şirketler, GPU bulut maliyetlerini optimize etmek isteyen ekipler ve yerel AI altyapısı kurmak isteyen kurumlar için uygundur. Hangi donanım ve yazılım kombinasyonunun ihtiyaca en uygun olduğu konusunda tarafsız danışmanlık sunulur."},
+    {q:"Veri analizi ve istatistiksel çalışmalar ne zaman gerekir?",a:"Karar süreçlerini veriye dayandırmak isteyen, ham veriyi anlamlı raporlara dönüştürmek isteyen veya kurumsal veri toplama süreçlerini yapılandırmak isteyen her işletme için gereklidir. İstatistiksel modelleme, görselleştirme ve düzenli raporlama hizmetleri sunulmaktadır."},
+    {q:"Nasıl iletişime geçebilirim?",a:"info@1adata.com adresine e-posta göndererek, 0850-521087 numaralı telefondan veya bu sayfadaki formu doldurarak ulaşabilirsiniz. En kısa sürede dönüş yapıyoruz."}
+  ]
+},
+en:{
+  n1:"Services",n2:"About",n3:"Projects",n4:"FAQ",n5:"Contact",
+  badge:"Since 2003 — 20+ Years of Experience",
+  h1:"Secure Infrastructure.",h2:"Intelligent Systems.",
+  hsub:"Enterprise IT security, data analytics, AI ecosystems and next-generation digital solutions. Istanbul-based, global vision.",
+  cta_main:"Strengthen & Protect Your Infrastructure",cta2:"Our Services",
+  s1:"Years Experience",s2:"Service Areas",s3:"Service Areas",
+  svctag:"Services",svctitle:"What We Do",
+  svcsub:"From enterprise IT infrastructure to data analytics, AI ecosystems to GPU consulting.",
+  s1t:"Ecosystem Security & Monitoring",s1d:"Enterprise network security, threat detection, continuous monitoring and security infrastructure design.",
+  s2t:"Data Recovery & Restore",s2d:"Rapid response to critical data loss, backup system implementation and disaster recovery planning.",
+  s3t:"Company IT Security Infrastructure",s3d:"Corporate IT infrastructure design, security policies, access management and compliance consulting.",
+  s4t:"Technology & GPU Power Consulting",s4d:"Strategic consulting for B2B AI infrastructure, GPU computing needs and local AI ecosystem deployment.",
+  s5t:"Data Collection, Analysis & Statistical Studies",s5d:"Corporate data collection process design, statistical modelling, reporting and data-driven decision support systems.",
+  s6t:"Enterprise AI & Machine Learning",s6d:"Enterprise AI application deployment, model integration, locally-run ML systems and ongoing operational consulting.",
+  s7t:"AI News Briefing — Free Subscription",s7d:"Daily technology and AI news briefing powered by the OpenAileen infrastructure. Provided free of charge to our clients and followers.",s7cta:"→ Subscribe Free",
+  atag:"About Us",atitle:"Who We Are",
+  aname:"1ADATA Management",arole:"Focused, experienced, results first",
+  e1l:"Experience",e1v:"2003 →",e2l:"Global Corporate Experience",e2v:"10+ years",e3l:"Field",e3v:"Logistics & IT",e4l:"Focus",e4v:"B2B & Enterprise",
+  ap1:"The 1ADATA management carries hands-on experience built since 2003 across logistics and technology — both at a personal and organisational level.",
+  ap2:"In addition, over a decade of first-hand exposure to the inner workings of global technology companies forms the foundation of the consulting services offered today. A team that knows how large organisations operate from the inside, moving with the agility of a small one.",
+  ap3:"Technical expertise in AI infrastructure, cybersecurity, data management and GPU computing is applied directly to make business processes more efficient and secure. This expertise is also reflected in forensic expert witness activities conducted within Istanbul courts.",
+  ap4:"No showmanship — just output. Building trust and delivering tangible value in every project is the primary goal.",
+  t1:"🚀 Logistics & Tech",t2:"🔒 Cybersecurity",t3:"🤖 AI Ecosystem",t4:"📊 Data & Analytics",t5:"🌍 Global Experience",
+  ptag:"Projects",ptitle:"Products We Build",psub:"Platforms and digital ventures brought to life within our ecosystem.",
+  bsoon:"COMING SOON",
+  gd:"A professional benchmark platform comparing GPU cloud providers on price, performance and reliability. Global and TR-based versions available.",
+  od:"An enterprise ML/AI ecosystem running on local infrastructure. Privacy-first, cloud-independent model management and automation platform.",
+  govd:"An independent platform for ML/AI governance and certification programmes. Compliance frameworks, policy development and governance structures for organisations.",
+  qd:"A next-generation search engine. Zero logging policy and privacy-first architecture redefine digital privacy.",
+  ld:"Domestic and international freight operations. Technology-driven logistics management with a focus on customer satisfaction.",
+  ftag:"FAQ",ftitle:"Frequently Asked Questions",
+  ctag:"Contact",ctitle:"Get In Touch",
+  fn:"Full Name",fe:"Email",fs:"Subject",fm:"Message",fsend:"Send Message →",
+  fo1:"Ecosystem Security & Monitoring",fo2:"Data Recovery & Restore",fo3:"IT Security Infrastructure",fo4:"Technology & GPU Consulting",fo5:"Data Analytics & Statistics",fo6:"Other",
+  fcp:"© 2003–2026 1ADATA. All rights reserved.",
+  contact:[
+    {ico:"📧",lbl:"Email",val:'<a href="mailto:info@1adata.com">info@1adata.com</a>'},
+    {ico:"📞",lbl:"Phone",val:"Tel: +90-850 532 10 87 &nbsp;|&nbsp; GSM: +90-551-836 01 01"},
+    {ico:"📍",lbl:"Address",val:"Sur Yapı Exen, Istanbul, Turkey"},
+    {ico:"🏛️",lbl:"Tax Information",val:"VKN: 8570100452 — Ümraniye Tax Office"},
+    {ico:"🌐",lbl:"Website",val:'<a href="https://1adata.com" style="color:var(--acc)">1adata.com</a>'}
+  ],
+  ftax:"VKN: 8570100452 — Istanbul / Ümraniye",
+  faqs:[
+    {q:"What is 1ADATA, what does it do and who is it for?",a:"1ADATA is an Istanbul-based technology team providing B2B services in enterprise IT security, data recovery, AI infrastructure and data analytics since 2003. We serve businesses of all sizes as well as private clients looking to strengthen their technology infrastructure."},
+    {q:"What does Ecosystem Security & Monitoring cover?",a:"Security analysis of corporate network infrastructure, intrusion detection and prevention systems, continuous system monitoring, vulnerability assessment and security policy design. Both auditing of existing systems and building secure infrastructure from scratch are available."},
+    {q:"How does the data recovery service work?",a:"When data loss occurs, we first analyse the situation, identify recoverable data and prepare an intervention plan. We handle hard disk failures, accidental deletion, RAID corruption and system crashes. Priority support is available for emergencies."},
+    {q:"How is IT security infrastructure deployment handled?",a:"We start by analysing the existing infrastructure and requirements. Security policies, access management, network segmentation and backup systems are then designed. Full support is provided during installation and deployment, followed by regular audits to ensure sustainability."},
+    {q:"Who is GPU and AI infrastructure consulting suitable for?",a:"Companies developing or planning AI/ML projects, teams looking to optimise GPU cloud costs, and organisations wanting to build local AI infrastructure. Impartial consulting is provided on the best hardware and software combination for each use case."},
+    {q:"When are data analytics and statistical studies needed?",a:"For any business wanting to base decisions on data, convert raw data into meaningful reports, or structure corporate data collection processes. Statistical modelling, visualisation and regular reporting services are available."},
+    {q:"How can I get in touch?",a:"Send an email to info@1adata.com, call +90 850-521087 or fill out the form on this page. We respond as quickly as possible."}
+  ]
+},
+de:{
+  n1:"Leistungen",n2:"Über uns",n3:"Projekte",n4:"FAQ",n5:"Kontakt",
+  badge:"Seit 2003 — 20+ Jahre Erfahrung",
+  h1:"Sichere Infrastruktur.",h2:"Intelligente Systeme.",
+  hsub:"Unternehmens-IT-Sicherheit, Datenanalyse, KI-Ökosysteme und Lösungen der nächsten Generation. Standort Istanbul, globale Vision.",
+  cta_main:"Infrastruktur stärken & schützen",cta2:"Unsere Leistungen",
+  s1:"Jahre Erfahrung",s2:"Leistungsbereiche",s3:"Leistungsbereiche",
+  svctag:"Leistungen",svctitle:"Was wir tun",
+  svcsub:"Von IT-Infrastruktur bis Datenanalyse, KI-Ökosystemen bis GPU-Beratung.",
+  s1t:"Ökosystem-Sicherheit & Monitoring",s1d:"Netzwerksicherheit, Bedrohungserkennung, kontinuierliches Monitoring und Sicherheitsinfrastrukturdesign.",
+  s2t:"Datenwiederherstellung & Restore",s2d:"Schnelle Reaktion bei Datenverlust, Backup-Implementierung und Notfallwiederherstellungsplanung.",
+  s3t:"Unternehmens-IT-Sicherheitsinfrastruktur",s3d:"IT-Infrastrukturdesign, Sicherheitsrichtlinien, Zugriffsverwaltung und Compliance-Beratung.",
+  s4t:"Technologie & GPU-Leistungsberatung",s4d:"Strategische Beratung für B2B-KI-Infrastruktur, GPU-Rechenanforderungen und KI-Ökosystembereitstellung.",
+  s5t:"Datenerhebung, Analyse & Statistische Studien",s5d:"Datenerhebungsprozesse, statistische Modellierung, Berichterstattung und datengestützte Entscheidungsunterstützung.",
+  s6t:"Unternehmens-KI & Maschinelles Lernen",s6d:"Deployment von Unternehmens-KI-Anwendungen, Modellintegration, lokal betriebene ML-Systeme und laufende Betriebsberatung.",
+  s7t:"KI-Nachrichtenbriefing — Kostenlos",s7d:"Tägliches Technologie- und KI-Nachrichtenbriefing auf Basis der OpenAileen-Infrastruktur. Kostenlos für unsere Kunden und Follower.",s7cta:"→ Kostenlos abonnieren",
+  atag:"Über uns",atitle:"Wer wir sind",
+  aname:"1ADATA Management",arole:"Fokussiert, erfahren, Ergebnis zuerst",
+  e1l:"Erfahrung",e1v:"2003 →",e2l:"Globale Unternehmenserfahrung",e2v:"10+ Jahre",e3l:"Bereich",e3v:"Logistik & IT",e4l:"Fokus",e4v:"B2B & Unternehmen",
+  ap1:"Das 1ADATA-Management trägt seit 2003 in Logistik und Technologie aufgebaute Praxiserfahrung — sowohl auf persönlicher als auch auf organisatorischer Ebene.",
+  ap2:"Darüber hinaus bildet über ein Jahrzehnt direkte Einblicke in globale Technologiekonzerne die Grundlage der heutigen Beratungsleistungen. Ein Team, das weiß, wie große Organisationen von innen funktionieren — mit der Agilität eines kleinen.",
+  ap3:"Know-how in KI-Infrastruktur, Cybersicherheit, Datenverwaltung und GPU-Computing wird direkt eingesetzt. Dieses technische Fachwissen spiegelt sich auch in forensischen Sachverständigentätigkeiten an Istanbuler Gerichten wider.",
+  ap4:"Keine Schaustellung — nur Ergebnisse. Vertrauen und greifbarer Mehrwert in jedem Projekt.",
+  t1:"🚀 Logistik & Tech",t2:"🔒 Cybersicherheit",t3:"🤖 KI-Ökosystem",t4:"📊 Daten & Analyse",t5:"🌍 Globale Erfahrung",
+  ptag:"Projekte",ptitle:"Unsere Produkte",psub:"Plattformen und digitale Unternehmungen aus unserem Ökosystem.",
+  bsoon:"DEMNÄCHST",
+  gd:"Professionelle Benchmark-Plattform zum Vergleich von GPU-Cloud-Anbietern. Global und TR-basiert verfügbar.",
+  od:"Unternehmens-ML/AI-Ökosystem auf lokaler Infrastruktur. Datenschutz-orientiert, Cloud-unabhängig.",
+  govd:"Unabhängige Plattform für ML/AI-Governance und Zertifizierungsprogramme.",
+  qd:"Suchmaschine der nächsten Generation. Zero-Logging-Politik und datenschutzorientierte Architektur.",
+  ld:"Inländische und internationale Frachtoperationen. Technologiegetriebenes Logistikmanagement.",
+  ftag:"FAQ",ftitle:"Häufig gestellte Fragen",
+  ctag:"Kontakt",ctitle:"Kontakt aufnehmen",
+  fn:"Vollständiger Name",fe:"E-Mail",fs:"Betreff",fm:"Nachricht",fsend:"Nachricht senden →",
+  fo1:"Ökosystem-Sicherheit & Monitoring",fo2:"Datenwiederherstellung & Restore",fo3:"IT-Sicherheitsinfrastruktur",fo4:"Technologie & GPU-Beratung",fo5:"Datenanalyse & Statistik",fo6:"Sonstige",
+  fcp:"© 2003–2026 1ADATA. Alle Rechte vorbehalten.",
+  contact:[
+    {ico:"📧",lbl:"E-Mail",val:'<a href="mailto:info@1adata.com">info@1adata.com</a>'},
+    {ico:"📞",lbl:"Telefon",val:"Tel: +90-850 532 10 87 &nbsp;|&nbsp; GSM: +90-551-836 01 01"},
+    {ico:"📍",lbl:"Adresse",val:"Sur Yapı Exen, Istanbul, Türkei"},
+    {ico:"🏛️",lbl:"Steuerinformationen",val:"VKN: 8570100452 — Finanzamt Ümraniye"},
+    {ico:"🌐",lbl:"Website",val:'<a href="https://1adata.com" style="color:var(--acc)">1adata.com</a>'}
+  ],
+  ftax:"VKN: 8570100452 — Istanbul / Ümraniye",
+  faqs:[
+    {q:"Was ist 1ADATA und für wen ist es?",a:"1ADATA ist ein Technologieteam aus Istanbul, das seit 2003 B2B-Dienstleistungen in IT-Sicherheit, Datenwiederherstellung, KI-Infrastruktur und Datenanalyse für Unternehmen und Privatpersonen anbietet."},
+    {q:"Was umfasst Ökosystem-Sicherheit & Monitoring?",a:"Sicherheitsanalyse der Netzwerkinfrastruktur, Intrusion-Detection-Systeme, kontinuierliches Monitoring, Schwachstellenbewertung und Sicherheitsrichtliniendesign. Sowohl Audits bestehender Systeme als auch Neuaufbau sicherer Infrastrukturen sind möglich."},
+    {q:"Wie funktioniert der Datenwiederherstellungsservice?",a:"Bei Datenverlust analysieren wir die Situation, identifizieren wiederherstellbare Daten und erstellen einen Interventionsplan. Festplattenausfälle, versehentliches Löschen, RAID-Beschädigungen und Systemabstürze werden behandelt. Prioritätssupport für Notfälle verfügbar."},
+    {q:"Wie wird die IT-Sicherheitsinfrastruktur aufgebaut?",a:"Zunächst werden bestehende Infrastruktur und Anforderungen analysiert. Dann werden Sicherheitsrichtlinien, Zugriffsverwaltung, Netzwerksegmentierung und Backup-Systeme entworfen. Vollständiger Support bei Installation und Inbetriebnahme, danach regelmäßige Audits."},
+    {q:"Für wen ist GPU- und KI-Infrastrukturberatung geeignet?",a:"Für Unternehmen, die KI/ML-Projekte entwickeln, Teams, die GPU-Cloud-Kosten optimieren möchten, und Organisationen, die lokale KI-Infrastruktur aufbauen wollen. Unparteiische Beratung zur besten Hardware-Software-Kombination."},
+    {q:"Wann werden Datenanalyse und statistische Studien benötigt?",a:"Für jedes Unternehmen, das Entscheidungen datenbasiert treffen, Rohdaten in aussagekräftige Berichte umwandeln oder Datenerhebungsprozesse strukturieren möchte. Statistische Modellierung, Visualisierung und regelmäßige Berichterstattung verfügbar."},
+    {q:"Wie kann ich Kontakt aufnehmen?",a:"E-Mail an info@1adata.com, Anruf unter +90 850-521087 oder Formular ausfüllen. Wir antworten so schnell wie möglich."}
+  ]
+}
 };
+
 let lang='tr';
-function setLang(l,btn){lang=l;document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');apply()}
-function apply(){const d=T[lang];document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i');if(d[k]!==undefined)el.textContent=d[k]});buildFaq()}
-function buildFaq(){const d=T[lang];document.getElementById('faqList').innerHTML=d.faqs.map((f,i)=>`<div class="fi" onclick="tf(${i})"><div class="fq"><span>${f.q}</span><div class="ficon">+</div></div><div class="fa"><p>${f.a}</p></div></div>`).join('')}
+
+function setLang(l,btn){
+  lang=l;
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  apply();
+}
+
+function buildHeroAud(){
+  const el=document.getElementById('heroAud');
+  if(!el)return;
+  const labels={
+    tr:[['B2B Ağ & IT Güvenliği','ha-b2b'],['Ev Ağı Güvenliği','ha-home']],
+    en:[['B2B Network & IT Security','ha-b2b'],['Home Network Security','ha-home']],
+    de:[['B2B-Netzwerk & IT-Sicherheit','ha-b2b'],['Heimnetzwerk-Sicherheit','ha-home']]
+  };
+  el.innerHTML=labels[lang].map(([l,c])=>`<div class="ha-pill ${c}">${l}</div>`).join('');
+}
+function apply(){
+  const d=T[lang];
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(d[k]!==undefined)el.textContent=d[k];
+  });
+  buildContact();
+  buildFaq();
+  buildHeroAud();
+  document.getElementById('ftax').textContent=d.ftax;
+}
+
+function buildContact(){
+  const d=T[lang];
+  document.getElementById('cinfo').innerHTML=d.contact.map(c=>`
+    <div class="ci">
+      <div class="cico">${c.ico}</div>
+      <div><div class="clbl">${c.lbl}</div><div class="cval">${c.val}</div></div>
+    </div>
+  `).join('');
+}
+
+function buildFaq(){
+  const d=T[lang];
+  document.getElementById('faqList').innerHTML=d.faqs.map((f,i)=>`
+    <div class="fi" onclick="tf(${i})">
+      <div class="fq"><span>${f.q}</span><div class="ficon">+</div></div>
+      <div class="fa"><p>${f.a}</p></div>
+    </div>
+  `).join('');
+}
+
 function tf(i){document.querySelectorAll('.fi')[i].classList.toggle('open')}
 function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
 apply();
