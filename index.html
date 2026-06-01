@@ -44,6 +44,10 @@ h2{font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-1px;margin-bot
 .bg2{background:var(--c2)}
 .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .sc{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:24px 20px;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:18px}
+.card-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;flex-shrink:0;max-width:55%}
+.sc .st2{margin-bottom:10px}
+.sc .sd{margin-bottom:0}
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .sc:hover{background:var(--card-h);border-color:rgba(30,111,255,.2);transform:translateY(-3px)}
 .sc:hover::before{transform:scaleX(1)}
@@ -164,32 +168,36 @@ footer{background:var(--c1);border-top:1px solid var(--border);padding:28px 5%;d
   <p class="ssub" data-i="svcsub"></p>
   <div class="sgrid">
     <div class="sc">
-      <div class="si">🔐</div><div class="st2" data-i="s1t"></div><div class="sd" data-i="s1d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+      <div class="card-header"><div class="si">🔐</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s1t"></div>
+      <div class="sd" data-i="s1d"></div>
     </div>
     <div class="sc">
-      <div class="si">💾</div><div class="st2" data-i="s2t"></div><div class="sd" data-i="s2d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+      <div class="card-header"><div class="si">💾</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s2t"></div>
+      <div class="sd" data-i="s2d"></div>
     </div>
     <div class="sc">
-      <div class="si">🏢</div><div class="st2" data-i="s3t"></div><div class="sd" data-i="s3d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+      <div class="card-header"><div class="si">🏢</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s3t"></div>
+      <div class="sd" data-i="s3d"></div>
     </div>
     <div class="sc">
-      <div class="si">⚡</div><div class="st2" data-i="s4t"></div><div class="sd" data-i="s4d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+      <div class="card-header"><div class="si">⚡</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s4t"></div>
+      <div class="sd" data-i="s4d"></div>
       <a href="https://gpustars.com" target="_blank" style="display:inline-block;margin-top:10px;font-size:11px;color:var(--acc);border-bottom:1px solid rgba(30,111,255,.3);padding-bottom:1px;text-decoration:none">→ GPU fiyatlarını karşılaştırın — gpustars.com</a>
     </div>
     <div class="sc">
-      <div class="si">📊</div><div class="st2" data-i="s5t"></div><div class="sd" data-i="s5d"></div>
-      <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+      <div class="card-header"><div class="si">📊</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s5t"></div>
+      <div class="sd" data-i="s5d"></div>
     </div>
     <div class="sc" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;padding:0;overflow:hidden">
       <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-        <div class="si">🤖</div>
-        <div class="st2" data-i="s6t"></div>
-        <div class="sd" data-i="s6d"></div>
-        <div class="svc-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div>
+        <div class="card-header"><div class="si">🤖</div><div class="card-tags"><span class="svc-tag t-b2b">B2B Network & IT</span><span class="svc-tag t-home">Home Network & IT</span></div></div>
+      <div class="st2" data-i="s6t"></div>
+      <div class="sd" data-i="s6d"></div>
       </div>
       <div style="background:rgba(255,255,255,0.06);width:1px;margin:24px 0"></div>
       <div style="padding:24px 28px;display:flex;flex-direction:column;gap:10px;background:rgba(0,212,170,0.03)">
